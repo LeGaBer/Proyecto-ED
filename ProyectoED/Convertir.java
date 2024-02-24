@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 /**
  * <pre>
- * Clase Convertidor
+ * Clase Convertir
  * 
  * La clase Convertir proporciona métodos para convertir una expresión 
  * matemática en notación infija a notación posfija. También incluye un 
