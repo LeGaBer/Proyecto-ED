@@ -1,11 +1,41 @@
 
 import java.util.ArrayList;
 
+/**
+ * <pre>
+ * Clase Convertidor
+ * 
+ * La clase Convertir proporciona métodos para convertir una expresión 
+ * matemática en notación infija a notación posfija. También incluye un 
+ * método privado para determinar la jerarquía de las operaciones.
+ * </pre>
+ * @version 1.0
+ * @author Ana Sofía Conde Islas, Carmen Sofía Delgado Escobar, Maria Alejandra Galicia Almaraz, Leonargo García Bernal, Alejandro Salas Aguilar y Jimena San German Elizondo
+ */
 public class Convertir {
+
+    /**
+     * Constructor vacío de la clase convertir.
+     */
     public Convertir( ){
         
     }
-    
+
+    /**
+     * <pre>
+     * Determina la jerarquía de una operación específica en una expresión matemática 
+     * y asigna un nivel de jerarquía a cada operación aritmética basado en su tipo.
+     * </pre>
+     * <ul>
+     * <li>Las operaciones de multiplicación (*) y división (/) tienen un nivel de jerarquía 2.</li>
+     * <li>Las operaciones de suma (+) y resta (-) tienen un nivel de jerarquía 1.</li>
+     * <li>La operación de potenciación (^) tiene el nivel de jerarquía más alto, 3.</li>
+     * <li>Para cualquier otro carácter, el nivel de jerarquía se establece en -1.</li>
+     * </ul>
+     * 
+     * @param chr El carácter que representa la operación.
+     * @return El nivel de jerarquía de la operación. Mayor número indica mayor precedencia. 
+     */
     private static int JerarquiaOperaciones(char chr){
         byte var;
         switch(chr){
@@ -26,6 +56,22 @@ public class Convertir {
         }
         return var;
     }
+
+    /**
+     * <pre>
+    * Convierte una expresión matemática en notación infija a notación posfija. 
+    * El algoritmo funciona iterando sobre cada carácter de la expresión de entrada 
+    * y procesándolos según las reglas de la notación posfija:
+    * </pre>
+    * <ul>
+    * <li>Los operandos se agregan directamente a la salida.</li>
+    * <li>Los operadores se colocan en una pila temporal, con ciertas reglas de precedencia.</li>
+    * <li>Los paréntesis se utilizan para agrupar operaciones y controlar el orden de evaluación.</li>
+    * </ul>
+    * 
+    * @param str La expresión matemática en notación infija.
+    * @return Una lista de cadenas que representan la expresión en notación posfija.
+    */
     public static ArrayList<String> Convertir(String str){
         ArrayList<String> arrayList=new ArrayList();
         ArregloPila<Character> pila=new ArregloPila();
