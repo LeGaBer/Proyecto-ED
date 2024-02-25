@@ -1,7 +1,24 @@
-
+/**
+ * <pre>
+ * Clase PruebaProyecto
+ * 
+ * Clase de prueba del proyecto de calculadora.
+ * Esta clase contiene el método main que realiza pruebas de las funciones del 
+ * proyecto. Las pruebas incluyen la sintaxis de las expresiones, la conversión 
+ * de expresiones a notación postfija y la evaluación de expresiones en notación 
+ * postfija para obtener el resultado.
+ * </pre>
+ * @version 1.0
+ * @author Ana Sofía Conde Islas, Carmen Sofía Delgado Escobar, Maria Alejandra Galicia Almaraz, Leonargo García Bernal, Alejandro Salas Aguilar y Jimena San German Elizondo
+ */
 public class PruebaProyecto {
     
     //Prueba Sintaxis 
+    /**
+     * Método principal que realiza pruebas de las funciones del proyecto de calculadora.
+     * 
+     * @param args Los argumentos de la línea de comandos.
+     */
     public static void main(String[] args) {
         //Prueba Sintaxis 
         System.out.println("SINTAXIS");
