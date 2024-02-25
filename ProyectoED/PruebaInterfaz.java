@@ -10,13 +10,21 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.BorderLayout;
 /**
- *
- * @author alega
+ * <pre>
+ * Clase PruebaInterfaz
+ * 
+ * Clase que contiene el método main para ejecutar la aplicación de la calculadora.
+ * Esta clase crea una interfaz gráfica de usuario y agtega el panel principal.
+ * </pre>
+ * @version 1.0
+ * @author Ana Sofía Conde Islas, Carmen Sofía Delgado Escobar, Maria Alejandra Galicia Almaraz, Leonargo García Bernal, Alejandro Salas Aguilar y Jimena San German Elizondo
+ * @see NewJPanel
  */
 public class PruebaInterfaz {
-
+    
     /**
-     * @param args the command line arguments
+     * Método principal que inicia la aplicación de la calculadora.
+     * @param args Los argumentos de la línea de comandos.
      */
     public static void main(String[] args) {
         // Crear la instancia de JFrame
