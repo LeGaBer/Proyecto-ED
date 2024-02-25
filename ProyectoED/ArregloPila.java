@@ -9,6 +9,7 @@
 * @version 1.0
 * @author Ana Sofía Conde Islas, Carmen Sofía Delgado Escobar, Maria Alejandra Galicia Almaraz, Leonardo García Bernal, Alejandro Salas Aguilar y Jimena San Germán Elizondo
 * @param <T> Tipo de elementos que puede recibir la pila.
+* @see PilaADT
 */
 public class ArregloPila <T> implements PilaADT<T>{
     private T[] stack;
