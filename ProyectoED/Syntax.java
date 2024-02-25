@@ -1,8 +1,30 @@
-
+/**
+ * <pre>
+ * Clase Syntax
+ * 
+ * Clase para verificar la sintaxis de una expresión matemática en formato de cadena.
+ * Permite determinar si la expresión cumple con ciertas reglas de sintaxis requeridas 
+ * para ser evaluada correctamente.
+ * </pre>
+ * @version 1.0
+ * @author Ana Sofía Conde Islas, Carmen Sofía Delgado Escobar, Maria Alejandra Galicia Almaraz, Leonargo García Bernal, Alejandro Salas Aguilar y Jimena San German Elizondo
+ */
 public class Syntax {
+    
+    /**
+     * Constructor vacío de la clase.
+     */
     public Syntax(){
-        
     }
+    
+     /**
+      * Verifica si una cadena puede ser convertida a un número double.
+      * @param str La cadena a analizar.
+      * @return <ul>
+      * <li>True: Si la cadena puede ser convertida a un número double.</li>
+      * <li>False: En caso contrario.</li>
+      * </ul>
+      */
     private static boolean analizandoNumero(String str){
         if(str==null)
             return false;
@@ -15,7 +37,21 @@ public class Syntax {
             }
         }
     }
-    
+
+    /**
+     * <pre>
+     * Verifica si un carácter es un comando válido en una expresión matemática.
+     * Los comandos válidos incluyen operadores matemáticos, dígitos y caracteres 
+     * especiales como paréntesis y punto decimal. Debido a que es una calculadora
+     * sencilla, con funcionalidad básica, se asume que no se utilizan funciones
+     * trigonométricas.
+     * </pre>
+     * @param chr El carácter a analizar.
+     * @return <ul>
+     * <li>True: Si el carácter es un comando válido.</li>
+     * <li>False: En caso contrario.</li>
+     * </ul>
+     */
     private static boolean Comandos(char chr){
         boolean variable;
         switch(chr){
@@ -84,6 +120,15 @@ public class Syntax {
         }
         return variable;
     }
+
+    /**
+     * Verifica si una cadena representa una operación matemática válida.
+     * @param str La cadena a analizar.
+     * @return <ul>
+     * <li>True: Si la cadena representa una operación matemática válida.</li>
+     * <li>False: En caso contrario.</li>
+     * </ul>
+     */
     private static boolean operacionValida(String str){
         boolean num=false;
         boolean operador=false;
@@ -102,9 +147,15 @@ public class Syntax {
         }
         return num && operador && nom;
     }
-
     
-    
+    /**
+     * Verifica la sintaxis de una expresión matemática dada.
+     * @param str La expresión matemática a analizar.
+     * @return <ul>
+     * <li>True: Si la expresión es sintácticamente válida.</li>
+     * <li>False: En caso contrario.</li>
+     * </ul>
+     */
     public static boolean Syntax(String str){
         ArregloPila<Character> pila= new ArregloPila();
         boolean resp=true;
