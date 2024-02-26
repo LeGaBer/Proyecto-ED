@@ -30,8 +30,8 @@ public class NewJPanel extends javax.swing.JPanel {
      * <pre>
      * Este constructor inicializa un nuevo panel y se 
      * inicializan los componentes gráficos del panel.
-     * @see initComponents()
      * </pre>
+     * @see initComponents()
      */
     public NewJPanel() {
         initComponents();
