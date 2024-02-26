@@ -1,10 +1,22 @@
 import java.util.ArrayList;
-
+/**
+ * 
+ * @author Leonardo García Bernal
+ */
 public class Convertir {
+
+    /**
+     *
+     */
     public Convertir() {
 
     }
-
+/**
+ * 
+ * @param chr Recibe un caractér cualquiera.
+ * @return Regresa la jerarquía del orden de ejecución de operadores aritméticos
+ * por convención si el peramétro es un operador,sino es operador regresa -1;
+ */
     private static int JerarquiaOperaciones(char chr) {
         byte var;
         switch (chr) {
@@ -25,7 +37,13 @@ public class Convertir {
         }
         return var;
     }
-
+/**
+ * 
+ * @param str Recibe la cadena de caracteres que contiene la operación aritmética que se quiere
+ * convertir a posfia.
+ * @return Regresa un ArrayList de los caracteres individuales del String dado como parámetro ordenados
+ * en forma posfija.
+ */
     public static ArrayList<String> Convertir(String str) {
         ArrayList<String> arrayList = new ArrayList();
         ArregloPila<Character> pila = new ArregloPila();
