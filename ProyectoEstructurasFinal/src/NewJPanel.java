@@ -7,14 +7,31 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- *
- * @author jime_sangerman
+ * <pre>
+ * Clase NewJPanel
+ * 
+ * Esta clase representa un panel de calculadora que permite a los usuarios 
+ * realizar operaciones aritméticas simples. La calcluladora proporciona 
+ * botones para los dígitos del '0' al '9' y de operadores permite, suma, 
+ * resta, multiplicación y división, así como paréntesis y exponente. Los 
+ * números y operadores ingresados se muestran en un área de texto, y al 
+ * presionar el boton "=" se evalúa la expresión matemática ingresada y se 
+ * muestra el resultado.
+ * </pre>
+ * @version 1.0
+ * @see #initComponents()
+ * @author Ana Sofía Conde Islas, Carmen Sofía Delgado Escobar, Maria Alejandra Galicia Almaraz, Leonargo García Bernal, Alejandro Salas Aguilar y Jimena San German Elizondo
  */
 public class NewJPanel extends javax.swing.JPanel {
     private String argumento= "";
 
+
     /**
-     * Creates new form NewJPanel
+     * <pre>
+     * Este constructor inicializa un nuevo panel y se 
+     * inicializan los componentes gráficos del panel.
+     * @see initComponents()
+     * </pre>
      */
     public NewJPanel() {
         initComponents();
@@ -27,6 +44,13 @@ public class NewJPanel extends javax.swing.JPanel {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    /**
+     * <pre>
+     * Inicializa y configura todos los componentes de la interfaz gráfica de la calculadora.
+     * Se establecen los botones numéricos, de operaciones y de control, así como también
+     * se definen los eventos asociados a cada uno de ellos.
+     * </pre>
+     */
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
@@ -309,77 +333,179 @@ public class NewJPanel extends javax.swing.JPanel {
             .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    /**
+     * Limpia el argumento y establece el texto del resultado como vacío.
+     * @param evt El evento de acción que desencadena la operación de borrar.
+     */
     private void borrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_borrarActionPerformed
         argumento = "";
         resultado.setText(argumento);
     }//GEN-LAST:event_borrarActionPerformed
 
+    /**
+     * <pre>
+     * Agrega el dígito '0' al argumento y actualiza el área de texto. Este 
+     * método se actualiza cuando haces clic en el botón '0' de la calculadora.
+     * </pre>
+     * @param evt El evento de acción que desencadena la adición del dígito '0'.
+     */
     private void jButton0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton0ActionPerformed
         argumento= argumento +"0";
         resultado.setText(argumento);
     }//GEN-LAST:event_jButton0ActionPerformed
-
+    
+    /**
+     * <pre>
+     * Agrega el dígito '9' al argumento y actualiza el área de texto. Este 
+     * método se actualiza cuando haces clic en el botón '9' de la calculadora. 
+     * </pre>
+     * @param evt El evento de acción que desencadena la adición del dígito '9'.
+     */
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
       argumento= argumento + "9";
       resultado.setText(argumento);
     }//GEN-LAST:event_jButton9ActionPerformed
 
+    /**
+     * <pre>
+     * Agrega el dígito '5' al argumento y actualiza el área de texto. Este 
+     * método se actualiza cuando haces clic en el botón '5' de la calculadora. 
+     * </pre>
+     * @param evt El evento de acción que desencadena la adición del dígito '5'.
+     */
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         argumento= argumento +"5";
         resultado.setText(argumento);
     }//GEN-LAST:event_jButton5ActionPerformed
 
+    /**
+     * <pre>
+     * Agrega el dígito '3' al argumento y actualiza el área de texto. Este 
+     * método se actualiza cuando haces clic en el botón '3' de la calculadora. 
+     * </pre>
+     * @param evt El evento de acción que desencadena la adición del dígito '3'.
+     */
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
        argumento= argumento +"3";
        resultado.setText(argumento);
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    /**
+     * <pre>
+     * Agrega el dígito '2' al argumento y actualiza el área de texto. Este 
+     * método se actualiza cuando haces clic en el botón '2' de la calculadora.
+     * </pre>
+     * @param evt El evento de acción que desencadena la adición del dígito '2'.
+     */
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         argumento= argumento +"2";
         resultado.setText(argumento);
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    /**
+     * <pre>
+     * Agrega el dígito '1' al argumento y actualiza el área de texto. Este 
+     * método se actualiza cuando haces clic en el botón '1' de la calculadora. 
+     * </pre>
+     * @param evt El evento de acción que desencadena la adición del dígito '1'.
+     */
     private void jButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonActionPerformed
         argumento= argumento +"1";
         resultado.setText(argumento);
     }//GEN-LAST:event_jButtonActionPerformed
 
+    /**
+     * <pre>
+     * Agrega el operador de suma '+' al argumento y actualiza el área de texto. Este 
+     * método se actualiza cuando haces clic en el botón '+' de la calculadora. 
+     * </pre>
+     * @param evt El evento de acción que desencadena la adición del operador de suma.
+     */
     private void sumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sumaActionPerformed
         argumento= argumento +"+";
         resultado.setText(argumento);
     }//GEN-LAST:event_sumaActionPerformed
 
+    /**
+     * <pre>
+     * Agrega el operador de resta '-' al argumento y actualiza el área de texto. Este 
+     * método se actualiza cuando haces clic en el botón '-' de la calculadora.
+     * </pre>
+     * @param evt El evento de acción que desencadena la adición del operador de resta.
+     */
     private void restaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_restaActionPerformed
         argumento= argumento +"-";
         resultado.setText(argumento);
     }//GEN-LAST:event_restaActionPerformed
 
+    /**
+     * <pre>
+     * Agrega un punto decimal '.' al argumento y actualiza el área de texto. Este 
+     * método se actualiza cuando haces clic en el botón '.' de la calculadora. 
+     * </pre>
+     * @param evt El evento de acción que desencadena la adición del punto decimal '0'.
+     */
     private void puntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_puntoActionPerformed
         argumento= argumento +".";
         resultado.setText(argumento);
     }//GEN-LAST:event_puntoActionPerformed
 
+    /**
+     * <pre>
+     * Agrega el dígito '7' al argumento y actualiza el área de texto. Este 
+     * método se actualiza cuando haces clic en el botón '7' de la calculadora. 
+     * </pre>
+     * @param evt El evento de acción que desencadena la adición del dígito '7'.
+     */
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         argumento= argumento +"7";
         resultado.setText(argumento);
     }//GEN-LAST:event_jButton7ActionPerformed
 
+    /**
+     * <pre>
+     * Agrega el dígito '4' al argumento y actualiza el área de texto. Este 
+     * método se actualiza cuando haces clic en el botón '4' de la calculadora. 
+     * </pre>
+     * @param evt El evento de acción que desencadena la adición del dígito '4'.
+     */
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         argumento= argumento +"4";
         resultado.setText(argumento);
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    /**
+     * <pre>
+     * Agrega el dígito '6' al argumento y actualiza el área de texto. Este 
+     * método se actualiza cuando haces clic en el botón '6' de la calculadora. 
+     * </pre>
+     * @param evt El evento de acción que desencadena la adición del dígito '6'.
+     */
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         argumento= argumento +"6";
         resultado.setText(argumento);
     }//GEN-LAST:event_jButton6ActionPerformed
 
+    /**
+     * <pre>
+     * Agrega el dígito '8' al argumento y actualiza el área de texto. Este 
+     * método se actualiza cuando haces clic en el botón '8' de la calculadora. 
+     * </pre>
+     * @param evt El evento de acción que desencadena la adición del dígito '8'.
+     */
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         argumento= argumento +"8";
         resultado.setText(argumento);
     }//GEN-LAST:event_jButton8ActionPerformed
 
+    /**
+     * <pre>
+     * Evalúa la expresión matemática ingresada en la calculadora y muestra el 
+     * resultado en el área de texto.
+     * </pre>
+     * @param evt El evento de acción que desencadena la evaluación de la expresión.
+     */
     private void igualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_igualActionPerformed
         Convertir miConversor = new Convertir();
         DePostfijaAResultado postfijo = new DePostfijaAResultado();
@@ -388,26 +514,64 @@ public class NewJPanel extends javax.swing.JPanel {
         resultado.setText(res);
     }//GEN-LAST:event_igualActionPerformed
 
+    /**
+     * <pre>
+     * Agrega un paréntesis izquierdo "(" al argumento actualmente ingresado en 
+     * la calculadora y lo muestra en el área de texto. 
+     * </pre>
+     * @param evt El evento de acción que desencadena la adición del paréntesis izquierdo.
+     */
     private void pizqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pizqActionPerformed
         argumento= argumento +"(";
         resultado.setText(argumento);
     }//GEN-LAST:event_pizqActionPerformed
 
+    /**
+     * <pre>
+     * Agrega el operador de multiplicación "*" al argumento actualmente 
+     * ingresado en la calculadora y actualiza el área de texto para mostrar el 
+     * argumento modificado.
+     * </pre>
+     * @param evt El evento de acción que desencadena la adición del operador de multiplicación.
+     */
     private void multiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplicacionActionPerformed
         argumento= argumento +"*";
         resultado.setText(argumento);
     }//GEN-LAST:event_multiplicacionActionPerformed
 
+    /**
+     * <pre>
+     * Agrega el operador de división "/" al argumento actualmente ingresado en 
+     * la calculadora y actualiza el área de texto para mostrar el argumento 
+     * modificado.
+     * </pre>
+     * @param evt El evento de acción que desencadena la adición del operador de división.
+     */
     private void divisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divisionActionPerformed
        argumento= argumento +"/";
        resultado.setText(argumento);
     }//GEN-LAST:event_divisionActionPerformed
 
+    /**
+     * <pre>
+     * Agrega el operador de exponente "^" al argumento actualmente ingresado en 
+     * la calculadora y actualiza el área de texto para mostrar el argumento 
+     * modificado.
+     * </pre>
+     * @param evt El evento de acción que desencadena la adición del operador de exponente.
+     */
     private void exponenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exponenteActionPerformed
         argumento= argumento +"^";
         resultado.setText(argumento);
     }//GEN-LAST:event_exponenteActionPerformed
 
+    /**
+     * <pre>
+     * Agrega un paréntesis derecho "(" al argumento actualmente ingresado en la 
+     * calculadora y lo muestra en el área de texto. 
+     * </pre>
+     * @param evt El evento de acción que desencadena la adición del paréntesis derecho.
+     */
     private void pderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pderActionPerformed
         argumento= argumento + ")";
         resultado.setText(argumento);
